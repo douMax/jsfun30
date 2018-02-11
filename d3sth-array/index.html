@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Array</title>
+  <style>
+    html, body {
+      background: black;
+      margin: 0;
+      padding: 0;
+    }
+  
+  </style>
+</head>
+
+<body>
+  
+  <div class="container"></div>
+
+</body>
+
+<script>
+  console.log('haha');
+
+
+function getArray(num) {
+  return Array(10).fill(num).map( (x, index) => x + index )
+}
+
+const b = getArray(1)
+
+c = b.map( x => ( getArray( (x-1) * 10 + 1 ).join(' ') ) ).join(' ')
+
+
+
+
+</script>
+</html>
