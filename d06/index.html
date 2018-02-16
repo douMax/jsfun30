@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CineMonster</title>
+  <style> 
+
+    html, body {
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search {
+      width: 500px;
+      font-family: 'Gill Sans', sans-serif;
+      font-size: 48px;
+      background: transparent;
+      border:0;
+      outline: 0;
+      border-bottom: 2px orange solid;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <input class="search" type="text">
+
+  </div>
+  
+</body>
+<script>
+
+    const products = []
+
+    const endPoint = "https://raw.githubusercontent.com/douMax/jsfun30/master/d6/products.json"
+    fetch(endPoint)
+      .then( blob => blob.json() )
+      .then( data => {
+        products.push(...data)
+        console.log(products)
+      })
+
+    
+
+    function findMatches(query, products) {
+      return products.filter(product => {
+        const regex = new RegExp(query, 'gi')
+        return product.brand.match(regex)
+      });
+    }
+
+  
+
+</script>
+</html>
