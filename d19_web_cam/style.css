@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: mediumaquamarine;
+}
+
+.photobooth {
+  background: white;
+  width: 90vw;
+  height: 90vh;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.photo {
+  transform: scaleX(-1);
+  filter: FlipH;
+}
+
+.player {
+  position: absolute;
+  top:0;
+  right:0;
+  width: 200px;
+  transform: scaleX(-1);
+}
+

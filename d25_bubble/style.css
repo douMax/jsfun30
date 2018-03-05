@@ -1,0 +1,13 @@
+.outer {
+  width: 500px;
+  height: 500px;
+  background:black;
+  top: 50%;
+  height: 50%;
+  transform: translateX(-50%) translateY( -50%);
+}
+
+body {
+  background: mediumaquamarine;
+  height: 100vh;
+}
